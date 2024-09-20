@@ -212,6 +212,7 @@
             height: 80px;
             object-fit: cover;
             border-radius: 5px;
+            margin-bottom: 10px; /* Add margin-bottom to separate image from text */
         }
 
         .service-item h3 {
@@ -223,27 +224,33 @@
             margin: 0;
         }
 
+        /* Rooms Section */
         .room-list {
             display: flex;
-            flex-direction: column;
-            gap: 20px;
+            flex-direction: row; /* Display rooms side by side */
+            flex-wrap: wrap; /* Allow wrapping of items if they don't fit in one row */
+            gap: 20px; /* Adjust gap between items */
+            justify-content: center; /* Center items horizontally */
         }
 
         .room-item {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 20px;
             background-color: #fff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%; /* Ensure cards take full width of container */
+            max-width: 400px; /* Restrict max width of cards */
         }
 
         .room-item img {
-            width: 150px;
-            height: 100px;
-            object-fit: cover;
+            width: 100%;
+            height: auto;
             border-radius: 5px;
+            object-fit: cover; /* Maintain aspect ratio */
         }
 
         .room-item h3 {
@@ -309,9 +316,14 @@
                 width: 90%;
             }
 
+            .room-list {
+                flex-direction: column; /* Stack items vertically on small screens */
+            }
+
             .room-item {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
+                text-align: center;
             }
 
             .room-item img {
@@ -320,6 +332,11 @@
             }
 
             .services {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-items {
                 flex-direction: column;
                 align-items: center;
             }
@@ -342,9 +359,9 @@
         <div class="hotel-details">
             <h1>Hyatt Regency Aqaba</h1>
             <div class="hotel-gallery">
-                <img src="{{ asset('img/hyatt-aqaba-lobby.jpg') }}" alt="hotel1">
-                <img src="{{ asset('img/hyatt-aqaba-pool.jpg') }}" alt="hotel2">
-                <img src="{{ asset('img/hyatt-aqaba-view.jpg') }}" alt="hotel3">
+                <img src="{{ asset('img/Hyatt-Regency-Aqaba-P003-Tree-Function-Area.16x9.webp') }}" alt="hotel1">
+                <img src="{{ asset('img/Hyatt-Regency-Aqaba-P015-Vista-Lounge-and-Bar-Sunset.4x3.webp') }}" alt="hotel2">
+                <img src="{{ asset('img/Hyatt-Regency-Aqaba-P018-Regency-Club-Terrace.16x9.webp') }}" alt="hotel3">
             </div>
         </div>
 
@@ -352,25 +369,16 @@
             <h2>Our Services</h2>
             <div class="service-items">
                 <div class="service-item">
-                    <img src="{{ asset('img/hyatt-room-service.jpg') }}" alt="service1">
-                    <div>
-                        <h3>24/7 Room Service</h3>
-                        <p>Enjoy round-the-clock room service with a diverse menu.</p>
-                    </div>
+                    <h3>24/7 Room Service</h3>
+                    <p>Enjoy round-the-clock room service with a diverse menu.</p>
                 </div>
                 <div class="service-item">
-                    <img src="{{ asset('img/hyatt-spa.jpg') }}" alt="service2">
-                    <div>
-                        <h3>Spa & Wellness</h3>
-                        <p>Relax and rejuvenate with our luxurious spa and wellness facilities.</p>
-                    </div>
+                    <h3>Spa & Wellness</h3>
+                    <p>Relax and rejuvenate with our luxurious spa and wellness facilities.</p>
                 </div>
                 <div class="service-item">
-                    <img src="{{ asset('img/hyatt-fitness-center.jpg') }}" alt="service3">
-                    <div>
-                        <h3>Fitness Center</h3>
-                        <p>Stay fit with our state-of-the-art fitness center, available to all guests.</p>
-                    </div>
+                    <h3>Fitness Center</h3>
+                    <p>Stay fit with our state-of-the-art fitness center, available to all guests.</p>
                 </div>
             </div>
         </div>
@@ -379,20 +387,18 @@
             <h2>Rooms</h2>
             <div class="room-list">
                 <div class="room-item">
-                    <img src="{{ asset('img/Hyatt-Regency-Aqaba-Ayla-Resort-P102-Prince-Suite-Bedroom.16x9.webp') }}" alt="deluxeKing">
+                    <img src="{{ asset('img/DSC07003-HDR-Edit-Edit-1.jpg') }}" alt="singleRoom">
                     <div>
-                        <h3>Deluxe King Room</h3>
-                        <p>1 King Bed - Max 3 persons - 30m² - Sea view or Pool view - Bathtub available on request.</p>
+                        <h3>Single Room</h3>
                         <p><strong>Price:</strong> $180</p><br>
                         <a href="#" class="book-button">Book Now</a>
                     </div>
                 </div>
 
                 <div class="room-item">
-                    <img src="{{ asset('img/hyatt-deluxe-twin.jpg') }}" alt="deluxeTwin">
+                    <img src="{{ asset('img/DDNSM_1-1.jpg') }}" alt="doubleRoom">
                     <div>
-                        <h3>Deluxe Twin Room</h3>
-                        <p>2 Twin Beds - Max 3 persons - 30m² - Sea view or Pool view - Bathtub available on request.</p>
+                        <h3>Double Room</h3>
                         <p><strong>Price:</strong> $180</p><br>
                         <a href="#" class="book-button">Book Now</a>
                     </div>

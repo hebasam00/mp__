@@ -225,29 +225,38 @@
 
         .room-list {
             display: flex;
-            flex-direction: column;
-            gap: 20px;
+            flex-direction: row;
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            gap: 20px; /* Space between items */
+            justify-content: center; /* Center align items */
         }
 
         .room-item {
             display: flex;
-            align-items: center;
-            gap: 20px;
+            flex-direction: column; /* Ensure items stack vertically */
+            align-items: center; /* Center align items horizontally */
             background-color: #fff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%; /* Ensure cards take full width of container */
+            max-width: 400px; /* Restrict max width of cards */
+            text-align: center; /* Center text inside cards */
         }
 
         .room-item img {
-            width: 150px;
-            height: 100px;
-            object-fit: cover;
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
             border-radius: 5px;
+            object-fit: cover; /* Ensure image covers area without distortion */
         }
 
         .room-item h3 {
             margin-top: 0;
+        }
+
+        .room-item p {
+            margin: 10px 0;
         }
 
         .book-button {
@@ -352,19 +361,16 @@
             <h2>Our Services</h2>
             <div class="service-items">
                 <div class="service-item">
-                    <img src="{{ asset('img/OIP (2).jpg') }}" alt="service1">
                     <div>
                         <h3>24/7 Room Service</h3>
                     </div>
                 </div>
                 <div class="service-item">
-                    <img src="{{ asset('img/csm_tepidarium_7fa0c0171b.jpg') }}" alt="service2">
                     <div>
                         <h3>Spa & Wellness</h3>
                     </div>
                 </div>
                 <div class="service-item">
-                    <img src="{{ asset('img/รูปภาพ-17-7-62-19-39-28.jpg') }}" alt="service3">
                     <div>
                         <h3>Fitness Center</h3>
                     </div>
@@ -376,21 +382,19 @@
             <h2>Rooms</h2>
             <div class="room-list">
                 <div class="room-item">
-                    <img src="{{ asset('img/334964_17041716210052441217.jpg') }}" alt="mov1">
+                    <img src="{{ asset('img/DSC07003-HDR-Edit-Edit-1.jpg') }}" alt="singleRoom">
                     <div>
-                        <h3>Deluxe King Room</h3>
-                        <p>1 King Bed - Max 3 persons - 28m² - City view or Mountain view - Bathtub available on request.</p>
-                        <p><strong>Price:</strong> $150</p><br>
+                        <h3>Single Room</h3>
+                        <p><strong>Price:</strong> $180</p><br>
                         <a href="#" class="book-button">Book Now</a>
                     </div>
                 </div>
 
                 <div class="room-item">
-                    <img src="{{ asset('img/jordan_movenpick_aqaba_bed.jpg') }}" alt="mov1">
+                    <img src="{{ asset('img/DDNSM_1-1.jpg') }}" alt="doubleRoom">
                     <div>
-                        <h3>Deluxe Twin Room</h3>
-                        <p>2 Twin Beds - Max 3 persons - 28m² - City view or Mountain view - Bathtub available on request.</p>
-                        <p><strong>Price:</strong> $150</p><br>
+                        <h3>Double Room</h3>
+                        <p><strong>Price:</strong> $180</p><br>
                         <a href="#" class="book-button">Book Now</a>
                     </div>
                 </div>

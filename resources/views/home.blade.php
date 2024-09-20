@@ -30,100 +30,7 @@
             max-width: 1200px;
         }
 
-        /* Navbar */
-        header {
-            background-color: #007bff;
-            padding: 20px 0;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        header .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        header .logo {
-            font-size: 24px;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: #fff;
-            margin-right: auto;
-        }
-
-        header nav {
-            flex-grow: 1;
-            text-align: center;
-        }
-
-        header nav ul {
-            display: inline-flex;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        header nav ul li {
-            margin-left: 20px;
-        }
-
-        header nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        header .search-login-wrapper {
-            display: flex;
-            align-items: center;
-            margin-left: auto;
-        }
-
-        header .search-bar {
-            margin-right: 10px;
-            display: flex;
-            align-items: center;
-        }
-
-        header .search-bar input {
-            padding: 10px;
-            width: 200px;
-            border-radius: 5px;
-            border: none;
-        }
-
-        header .search-bar button {
-            padding: 10px 15px;
-            background-color: #fff;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-left: 5px;
-        }
-
-        header .login-button {
-            background-color: #fff;
-            color: #007bff;
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        header .login-button:hover {
-            background-color: #0056b3;
-            color: #fff;
-        }
+   
 
         /* Hero Section */
         .hero {
@@ -189,23 +96,7 @@
             color: #666;
         }
 
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        footer .social-links a {
-            color: #fff;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-
-        footer .social-links a:hover {
-            text-decoration: underline;
-        }
+   
 
         /* Wel Class */
         .wel {
@@ -248,7 +139,6 @@
 @include('restaurants') 
 @include('car-rentals') 
 @include('Things') 
-@include('Ayla') 
 @include('footer') 
 
 </body>

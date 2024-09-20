@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::get('/home', function () {
     return view('home');
 });
@@ -69,3 +70,58 @@ Route::get('/HyattRegencyAqaba', function () {
     return view('HyattRegencyAqaba');
 })->name('HyattRegencyAqaba');
 
+
+Route::get('/lacosta', function () {
+    return view('lacosta');
+})->name('lacosta');
+
+Route::get('/oryx', function () {
+    return view('oryx');
+})->name('oryx');
+
+Route::get('/luxuryyachts', function () {
+    return view('luxuryyachts');
+})->name('luxuryyachts');
+
+
+Route::get('/speedyachts', function () {
+    return view('speedyachts');
+})->name('speedyachts');
+
+Route::get('/FineDining', function () {
+    return view('FineDining');
+})->name('fine');
+
+Route::get('/casual', function () {
+    return view('CasualDining');
+})->name('casual');
+
+Route::get('/economycar', function () {
+    return view('economycar');
+})->name('economycar');
+
+
+
+
+Route::get('/ScubaDiving', function () {
+    return view('ScubaDiving');
+})->name('ScubaDiving');
+
+Route::get('/DesertSafari', function () {
+    return view('DesertSafari');
+})->name('DesertSafari');
+ 
+
+Route::get('/AylaGolfClub', function () {
+    return view('AylaGolfClub');
+})->name('AylaGolfClub');
+ 
+
+Route::get('/AylaYachtClub', function () {
+    return view('AylaYachtClub');
+})->name('AylaYachtClub');
+ 
+Route::get('/luxurycar', function () {
+    return view('luxurycar');
+})->name('luxurycar');
+ 
